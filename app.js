@@ -157,6 +157,14 @@ const rewriteState = {
 
 const membershipPlans = [
   {
+    id: "trial-no-image",
+    name: "尝鲜版(日卡)",
+    price: "¥3.99",
+    credits: "60 积分",
+    estimate: "大约生成 5 篇 1200字文章",
+    target: "无图会员，适合短期体验与功能试用",
+  },
+  {
     id: "personal-no-image",
     name: "个人版",
     price: "¥29.9",
@@ -167,6 +175,14 @@ const membershipPlans = [
   {
     id: "matrix-no-image",
     name: "矩阵版",
+    price: "¥59.9",
+    credits: "1800 积分",
+    estimate: "大约生成 150 篇 1200字文章",
+    target: "无图会员，适合多账号轻量矩阵运营",
+  },
+  {
+    id: "matrix-high-no-image",
+    name: "矩阵版(高配版)",
     price: "¥119.9",
     credits: "3600 积分",
     estimate: "大约生成 300 篇 1200字文章",
@@ -185,6 +201,14 @@ const membershipPlans = [
 
 const imageMembershipPlans = [
   {
+    id: "trial-image",
+    name: "尝鲜版(日卡)配图会员",
+    price: "¥3.99",
+    credits: "90 积分",
+    estimate: "大约生成 5 篇 1200字文章 + 每篇3张图片",
+    target: "适合短期体验自动配图能力",
+  },
+  {
     id: "personal-image",
     name: "个人版配图会员",
     price: "¥49.9",
@@ -195,6 +219,14 @@ const imageMembershipPlans = [
   {
     id: "matrix-image",
     name: "矩阵版配图会员",
+    price: "¥119",
+    credits: "2700 积分",
+    estimate: "大约生成 150 篇 1200字文章 + 每篇3张图片",
+    target: "适合多账号轻量矩阵产文配图",
+  },
+  {
+    id: "matrix-high-image",
+    name: "矩阵版配图会员(高配版)",
     price: "¥199",
     credits: "5400 积分",
     estimate: "大约生成 300 篇 1200字文章 + 每篇3张图片",
@@ -1198,10 +1230,10 @@ function renderBenefits() {
   const imagePlanCards = renderPlanCards(imageMembershipPlans);
 
   const comparisonRows = [
-    ["积分额度", "720 积分", "3600 积分", "14400 积分"],
-    ["1200字文章估算", "大约生成 60 篇", "大约生成 300 篇", "大约生成 1200 篇"],
-    ["一键写作", "个人账号", "矩阵账号", "团队账号"],
-    ["配图消耗", "每 1 张图片消耗 200 积分", "每 1 张图片消耗 200 积分", "每 1 张图片消耗 200 积分"],
+    ["积分额度", "60 / 720 积分", "1800 / 3600 积分", "14400 积分"],
+    ["1200字文章估算", "大约生成 5 / 60 篇", "大约生成 150 / 300 篇", "大约生成 1200 篇"],
+    ["一键写作", "尝鲜与个人账号", "矩阵账号", "团队账号"],
+    ["配图消耗", "每 1 张图片消耗 2 积分", "每 1 张图片消耗 2 积分", "每 1 张图片消耗 2 积分"],
   ]
     .map(
       (row) => `
@@ -1260,8 +1292,8 @@ function renderBenefits() {
             <thead>
               <tr>
                 <th>权益</th>
-                <th>个人版</th>
-                <th>矩阵版</th>
+                <th>尝鲜/个人版</th>
+                <th>矩阵版/高配版</th>
                 <th>团队版</th>
               </tr>
             </thead>
