@@ -184,14 +184,6 @@ const membershipPlans = [
 
 const imageMembershipPlans = [
   {
-    id: "trial-image",
-    name: "尝鲜版(日卡)配图会员",
-    price: "¥3.99",
-    credits: "90 积分",
-    estimate: "大约生成 5 篇 1200字文章 + 每篇3张图片",
-    target: "适合短期体验自动配图能力",
-  },
-  {
     id: "personal-image",
     name: "个人版配图会员",
     price: "¥49.9",
