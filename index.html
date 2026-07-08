@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>硅基智写 - 用户后台</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="主导航">
+        <button class="mobile-close" type="button" aria-label="关闭导航" data-action="close-menu">×</button>
+        <div class="brand">
+          <div class="brand-mark">硅</div>
+          <div>
+            <div class="brand-name">硅基智写</div>
+            <div class="brand-subtitle">内容生产工作台</div>
+          </div>
+        </div>
+
+        <nav id="navList" class="nav-list" aria-label="用户后台导航"></nav>
+
+        <section class="sidebar-card" aria-label="额度信息">
+          <div class="card-kicker">本月剩余额度</div>
+          <strong>86 次</strong>
+          <p>升级会员可解锁更多写作与改写次数。</p>
+          <button class="upgrade-button" type="button" data-route="benefits">查看会员权益</button>
+        </section>
+      </aside>
+
+      <div class="main-panel">
+        <header class="topbar">
+          <div class="topbar-heading">
+            <button class="menu-button" type="button" aria-label="打开导航" aria-controls="navList" aria-expanded="false" data-action="open-menu">☰</button>
+            <div>
+              <div class="eyebrow">用户端</div>
+              <h1 id="pageTitle">首页概览</h1>
+            </div>
+          </div>
+          <div class="topbar-actions">
+            <button class="icon-button" type="button" data-action="virtual" data-message="暂无新通知">通知</button>
+            <button class="profile-button" type="button" data-route="settings">陈同学 · Pro</button>
+          </div>
+        </header>
+
+        <main id="app" class="content" tabindex="-1"></main>
+      </div>
+    </div>
+
+    <div id="toastRegion" class="toast-region" aria-live="polite" aria-atomic="true"></div>
+    <div id="modalRoot"></div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
